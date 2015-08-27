@@ -11,6 +11,14 @@ Install gem to vagrant:
 
     $ vagrant plugin install vagrant-vagga
 
+## Make your Vagga project support Windows or MacOS
+
+ 1. Install Vagrant
+ 2. Add Vagrantfile with content like in Usage paragraph below
+ 3. Install vagrant-vagga plugin
+ 4. You're awesome!
+
+
 ## Usage
 
 Vagrantfile should contain provision line to install vagga on `vagrant up`.
