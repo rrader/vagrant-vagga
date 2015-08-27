@@ -18,6 +18,7 @@ Install gem to vagrant:
  3. Install vagrant-vagga plugin
  4. You're awesome!
 
+Example project: https://github.com/rrader/vagrant-vagga/tree/master/example
 
 ## Usage
 
