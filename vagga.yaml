@@ -1,0 +1,11 @@
+containers:
+  test:
+    setup:
+    - !Ubuntu trusty
+
+commands:
+
+  test: !Command
+    description: Test command
+    container: test
+    run: echo 'Feel the Force'

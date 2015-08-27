@@ -2,6 +2,27 @@ require "vagrant/vagga/version"
 
 module Vagrant
   module Vagga
-    # Your code goes here...
+    class Vagga < Vagrant.plugin("2")
+      name "vagga"
+
+      description <<-DESC
+      Vagga Provisioner
+      DESC
+
+      config :vagga do
+        require_relative "config"
+        Config
+      end
+
+      provisioner :vagga do
+        require_relative 'provisioner'
+        Provisioner
+      end
+
+      # def initialize(machine, config)
+      #   super
+      #   @logger = Log4r::Logger.new("vagrant::provisioners::vagga")
+      # end
+    end
   end
 end
