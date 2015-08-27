@@ -24,10 +24,7 @@ module Vagrant
         require_relative 'command'
         Command
       end
-      # def initialize(machine, config)
-      #   super
-      #   @logger = Log4r::Logger.new("vagrant::provisioners::vagga")
-      # end
+
     end
   end
 end
