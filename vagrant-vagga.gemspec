@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["roman.rader@gmail.com"]
 
   spec.summary       = "Vagrant plugin to install vagga in the box"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/rrader/vagrant-vagga"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
