@@ -19,6 +19,11 @@ module Vagrant
         Provisioner
       end
 
+
+      command :vagga do
+        require_relative 'command'
+        Command
+      end
       # def initialize(machine, config)
       #   super
       #   @logger = Log4r::Logger.new("vagrant::provisioners::vagga")
