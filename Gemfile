@@ -8,5 +8,4 @@ group :plugins do
   gem "vagrant-vagga", path: "."
 end
 
-# Specify your gem's dependencies in vagrant-vagga.gemspec
-# gemspec
+gemspec
