@@ -1,7 +1,7 @@
 require "vagrant"
 
 
-module Vagrant
+module VagrantPlugins
   module Vagga
     class Config < Vagrant.plugin("2", :config)
       attr_accessor :install

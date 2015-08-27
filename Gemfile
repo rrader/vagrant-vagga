@@ -5,7 +5,7 @@ group :development do
 end
 
 group :plugins do
-  gem "vagrant-vagga", path: "."
+  gemspec
+  # gem "vagrant-vagga", path: "."
 end
 
-gemspec

@@ -1,6 +1,6 @@
 require 'fileutils'
 
-module Vagrant
+module VagrantPlugins
   module Vagga
     class Provisioner < Vagrant.plugin('2', :provisioner)
 

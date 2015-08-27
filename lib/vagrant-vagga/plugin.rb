@@ -1,6 +1,4 @@
-require "vagrant/vagga/version"
-
-module Vagrant
+module VagrantPlugins
   module Vagga
     class Vagga < Vagrant.plugin("2")
       name "vagga"

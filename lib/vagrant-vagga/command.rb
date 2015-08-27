@@ -1,4 +1,4 @@
-module Vagrant
+module VagrantPlugins
   module Vagga
     class Command < Vagrant.plugin('2', :command)
 
