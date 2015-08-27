@@ -8,5 +8,5 @@
 /spec/reports/
 /tmp/
 /vendor
-/.vagrant
-/.vagga
+.vagrant
+.vagga

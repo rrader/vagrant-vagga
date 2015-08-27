@@ -26,3 +26,6 @@ cat > ~vagrant/.vagga/settings.yaml << EOF
 storage-dir: "/home/vagrant/"
 EOF
 
+chown -R vagrant:vagrant ~vagrant/.vagga
+
+echo "Vagga installed successfully"

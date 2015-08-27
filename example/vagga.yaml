@@ -1,0 +1,12 @@
+containers:
+  flask:
+    setup:
+    - !Ubuntu trusty
+    - !Py3Requirements requirements.txt
+
+commands:
+
+  run: !Command
+    description: Run test server
+    container: flask
+    run: python3 hello.py

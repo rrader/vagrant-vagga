@@ -10,7 +10,10 @@ module VagrantPlugins
 
       def execute
         args = @argv.join(' ')
-        command = "cd /vagrant; vagga #{args}"
+        vagga_command = "vagga #{args}"
+        # Workaround for ERROR:vagga::wrapper: Error executing _build: Error symlinking storage: Permission denied (os error 13)
+        vagga_command = "sudo #{vagga_command}"
+        command = "cd /vagrant; #{vagga_command}"
 
         with_target_vms(nil, single_target: true) do |vm|
           @logger.info("Executing vagga command on remote machine: #{command}")
