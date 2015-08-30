@@ -11,7 +11,7 @@ fi
 
 
 
-VAGGA_VERSION=$(curl -s http://files.zerogw.com/vagga/latest-testing.html | sed -e 's/<[^>]*>//g' -e 's/vagga-//g' -e 's/.tar.xz//g')
+VAGGA_VERSION=$(curl -s http://files.zerogw.com/vagga/latest.html | sed -e 's/<[^>]*>//g' -e 's/vagga-//g' -e 's/.tar.xz//g')
 echo "Latest Vagga version is $VAGGA_VERSION, installing..."
 
 cd /tmp
