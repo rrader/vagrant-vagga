@@ -39,9 +39,8 @@ end
 Your working directory with Vagrantfile should also contain vagga.yaml, which is implied by plugin logic.
 
 ```shell
-$ vagrant up
-... # after it's done
 $ vagrant vagga
+[... long output spinning up the VM (only first time)]
 Available commands:
     run                 Run app
     setup               Setup application
