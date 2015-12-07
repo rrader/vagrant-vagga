@@ -10,6 +10,7 @@ module VagrantPlugins
 
       def provision
         setup_vagga
+        setup_exec_script
       end
 
       def setup_vagga
@@ -27,6 +28,13 @@ module VagrantPlugins
             @machine.env.ui.info(data.rstrip)
           end
         end
+      end
+
+      def setup_exec_script
+        setup_script_destination = "/tmp/exec_vagga.sh"
+        setup_script_path = Pathname.new("../exec_vagga.sh").expand_path(__FILE__)
+        @machine.communicate.upload(setup_script_path.to_s, setup_script_destination)
+        @machine.communicate.sudo("chmod +x %s" % setup_script_destination)
       end
 
     end
