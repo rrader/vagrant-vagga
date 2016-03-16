@@ -24,7 +24,12 @@ module VagrantPlugins
           @machine.communicate.upload(setup_script_path.to_s, setup_script_destination)
           @machine.communicate.sudo("chmod +x %s" % setup_script_destination)
 
-          setup_call = @machine.communicate.sudo("%s" % [setup_script_destination]) do |type, data|
+          if @machine.config.vagga.testing
+            repository = "vagga-testing"
+          else
+            repository = "vagga"
+          end
+          setup_call = @machine.communicate.sudo("%s %s" % [setup_script_destination, repository]) do |type, data|
             @machine.env.ui.info(data.rstrip)
           end
         end

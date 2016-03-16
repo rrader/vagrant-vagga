@@ -2,23 +2,17 @@ if which vagga &> /dev/null; then
     echo "Vagga is already installed"
     exit 0
 fi
-
+REPO=$1
 
 if [ -f /etc/lsb-release ]; then
     # install uidmap in Ubuntu
     apt-get -qq install -y --force-yes uidmap
 fi
 
+echo "deb http://ubuntu.zerogw.com $REPO main" | sudo tee /etc/apt/sources.list.d/vagga.list
 
-
-VAGGA_VERSION=$(curl -s http://files.zerogw.com/vagga/latest.html | sed -e 's/<[^>]*>//g' -e 's/vagga-//g' -e 's/.tar.xz//g')
-echo "Latest Vagga version is $VAGGA_VERSION, installing..."
-
-cd /tmp
-curl -s "http://files.zerogw.com/vagga/vagga-${VAGGA_VERSION}.tar.xz" | tar -xJ
-cd vagga
-export PREFIX=/usr
-bash install.sh
+apt-get update
+apt-get install vagga -y --force-yes
 
 mkdir -p ~vagrant/.vagga
 
