@@ -18,6 +18,8 @@ Install gem to vagrant:
  3. Install vagrant-vagga plugin
  4. You're awesome!
 
+*Note: the plugin is tested on the ubuntu/trusty64 box, so use it as possible.*
+
 Example project: https://github.com/rrader/vagrant-vagga/tree/master/example
 
 ## Usage
@@ -49,6 +51,10 @@ Available commands:
 $ vagrant vagga test
 <...> # building images
 ```
+
+## vagga-testing
+
+If you want to use vagga-testing version of vagga, add `config.vagga.testing = true` to your Vagrantfile.
 
 ## Development
 
