@@ -52,6 +52,11 @@ $ vagrant vagga test
 <...> # building images
 ```
 
+### vagga-testing
+
+If you want to use vagga-testing version of vagga, add `config.vagga.testing = true` to your Vagrantfile.
+
+
 ## Development
 
 http://docs.vagrantup.com/v2/plugins/development-basics.html
